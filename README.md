@@ -42,6 +42,7 @@ Object-Oriented_Programming/
 │── Overriding.cpp
 │── Polymorphism.cpp
 
+---
 
 🛠️ Technologies Used
 
@@ -49,7 +50,7 @@ C++
 Git & GitHub
 Visual Studio Code
 
-
+---
 
 🎯 Learning Outcome
 
@@ -61,6 +62,7 @@ Improve C++ programming skills
 
 Learn how to structure C++ projects
 
+---
 
 👤 Author
 
