@@ -37,13 +37,13 @@ class BinaryTree{
 };
 
 // Method to find the Maximum Depth of Binary Tree(BT) 
-int HeightOfNodes(Node* root){
+int MaxDepth(Node* root){
     if(root == nullptr){
         return 0;
     }
     // Recursive function
-    int leftHeight=HeightOfNodes(root->left);
-    int rightHeight=HeightOfNodes(root->right);
+    int leftHeight=MaxDepth(root->left);
+    int rightHeight=MaxDepth(root->right);
     return max(leftHeight,rightHeight)+1;
 }
 
@@ -54,8 +54,8 @@ int main(){
     BinaryTree* tree=new BinaryTree();
     Node* root=tree->buildTree(nodes,k);
     cout<<"Root of Binary Tree is: "<<root->data<<endl;
-    HeightOfNodes(root);
-    cout<<"Maximum Depth Of Binary Tree is: "<<HeightOfNodes(root)<<endl;
+    int depth=MaxDepth(root);
+    cout<<"Maximum Depth Of Binary Tree is: "<<depth<<endl;
     return 0;
 }
 
