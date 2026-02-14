@@ -1,0 +1,68 @@
+// LeetCode Problem 111: Minimum Depth Of Binary Tree
+#include<iostream>
+using namespace std;
+
+// Node class of Binary Tree(BT)
+class Node{
+    // Public Access Modifier And Data Members
+    public:
+    int data;
+    // Pointer To Left And Right Child Of Node
+    Node* left;
+    Node* right;
+    // Parameterized Constructor
+    Node(int data){
+        this->data=data;
+        this->left=nullptr;
+        this->right=nullptr;
+    }
+};
+
+// class to find the root of Binary Tree(BT)
+class BinaryTree{
+    public:
+    int index=-1;
+    Node* buildTree(int nodes[],int k){
+        index++;
+        if(index >= k || nodes[index] == -1){
+            return nullptr;
+        }
+        // Creating New Node
+        Node* newNode =new Node(nodes[index]);
+        // Recursive Function
+        newNode->left=buildTree(nodes,k); // for left child of Binary Tree(BT)
+        newNode->right=buildTree(nodes,k); // for right child of Binary Tree(BT)
+        return newNode;
+    }
+};
+
+// Method to find the Minimum Depth of Binary Tree(BT) 
+int MinDepth(Node* root){
+    if(root == nullptr){
+        return 0;
+    }
+    // Recursive function
+    int leftHeight=MinDepth(root->left);
+    int rightHeight=MinDepth(root->right);
+    
+    if(leftHeight == 0){
+        return rightHeight+1;
+    }
+    if(rightHeight == 0){
+        return leftHeight+1;
+    }
+    return min(leftHeight,rightHeight)+1;
+}
+
+// Main function
+int main(){
+    int nodes[]={3,9,-1,-1,20,15,-1,-1,7,-1,-1};
+    int k=sizeof(nodes)/sizeof(nodes[0]);
+    BinaryTree tree;
+    Node* root=tree.buildTree(nodes,k);
+    cout<<"Root of Binary Tree is: "<<root->data<<endl;
+    int depth=MinDepth(root);
+    cout<<"Minimum Depth Of Binary Tree is: "<<depth<<endl;
+    return 0;
+}
+
