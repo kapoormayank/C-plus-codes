@@ -29,6 +29,7 @@ class BinaryTree{
         }
         // Create a new node with the current index value
         Node* newNode=new Node(nodes[index]);
+        // Recursive calls to build the left and right subtrees
         newNode->left=buildTree(nodes,k);
         newNode->right=buildTree(nodes,k);
         return newNode;
