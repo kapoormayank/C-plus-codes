@@ -1,4 +1,4 @@
-// Deleting Node From Binary Tree(BT) Algorithm Implementation I nC++
+// Deleting Node From Binary Tree(BT) Algorithm Implementation In C++
 #include<iostream>
 using namespace std;
 
