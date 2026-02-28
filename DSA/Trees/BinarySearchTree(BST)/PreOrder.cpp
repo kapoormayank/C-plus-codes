@@ -1,4 +1,4 @@
-// Pre-order Traversal Of BST Algorithm Implementation In Java
+// Pre-order Traversal Of BST Algorithm Implementation In C++
 // Time Complexity: O(n)
 // Space Complexity: O(h)
 

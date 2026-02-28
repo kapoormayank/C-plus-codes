@@ -1,4 +1,4 @@
-// Maximum Depth Of BST Algorithm Implementation In Java
+// Maximum Depth Of BST Algorithm Implementation In C++
 // Time Complexity: O(n)
 // Space Complexity: O(h)
 
