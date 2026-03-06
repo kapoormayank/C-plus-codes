@@ -24,7 +24,7 @@ void swappOfArray(vector<int>& arr,int n) {
 // Main function
 int main() {
     int n;
-    cout<<"Enter size of matrix: ";
+    cout<<"Enter size of array: ";
     cin>>n;
     vector<int> arr(n);
     cout<<"Enter elements: ";
