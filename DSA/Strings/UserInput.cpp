@@ -1,5 +1,4 @@
 // User Input String Algorithm Implementation In C++
-
 #include<iostream>
 using namespace std;
 
