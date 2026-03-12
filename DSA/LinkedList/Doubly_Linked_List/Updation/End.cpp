@@ -1,4 +1,4 @@
-// Update The Node From Beginning Algorithm Implementation In C++
+// Update The Node From End Algorithm Implementation In C++
 #include<iostream>
 using namespace std;
 // Node class of Doubly Linked List
@@ -36,13 +36,13 @@ class DoublyLL{
         }
     }  
 
-    // Function to update the node from beginning
-    void updateAtBeginning(int value) {
+    // Function to update the node from end
+    void updateAtEnd(int value) {
          if(head == nullptr) {
             cout<<"Doubly Linked List is empty. Cannot update."<<endl;
             return;
         }
-        head->data=value;
+        tail->data=value;
     }
 
     // Display the Doubly Linked List
@@ -75,9 +75,9 @@ int main() {
     cout<<"Display Doubly Linked List nodes: ";
     list->display();
     int values;
-    cout<<"Enter the value to update the first node of Doubly Linked List: ";
+    cout<<"Enter the value to update the last node of Doubly Linked List: ";
     cin>>values;
-    list->updateAtBeginning(values);
+    list->updateAtEnd(values);
     cout<<"After update the node Doubly Linked List display: ";
     list->display();
     return 0;
